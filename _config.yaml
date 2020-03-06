@@ -2,6 +2,8 @@ collections:
   authors:
     output: true
 
+baseurl: /jekyll
+
 defaults:
   - scope:
       path: ""
