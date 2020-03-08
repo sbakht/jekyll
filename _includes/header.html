@@ -7,7 +7,15 @@
 <!-- Script pointing to search-script.js -->
 <script src="{{ '/assets/js/vendor/search-script.min.js' | relative_url}}" type="text/javascript"></script>
 
-<!-- Configuration -->
+{% if jekyll.environment == "production" %}
+<script>
+    SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '/jekyll/search.json'
+    });
+</script>
+{% else %}
 <script>
     SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
@@ -15,3 +23,4 @@
         json: '/search.json'
     });
 </script>
+{% endif %}
