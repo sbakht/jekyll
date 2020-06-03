@@ -1,11 +1,8 @@
 nav {
-    display: flex;
-    flex-direction: column;
-    width: 200px;
 }
 
-.nav__link {
-    font-weight: bold;
-    margin: 6px 0;
-    border-bottom: 1px solid #dcdcdc;
+nav .nav__link {
+  font-weight: bold;
+  margin: 6px 0;
+  border-bottom: 1px solid #dcdcdc;
 }

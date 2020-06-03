@@ -1,0 +1,23 @@
+---
+title: Fatwas - History
+---
+
+<h1>Fatwas</h1>
+
+<ul class="fatwas__list">
+  {% for fatwa in site.data.qa.title %}
+  <li class="fatwa">
+    <a
+      class="fatwa__preview"
+      href="fatwas/history/{{fatwa.name | downcase | replace: " ", "-" | replace: "?", "" | replace: "(", "" | replace: ")", "" }}"
+    >
+      {% if fatwa.Title == fatwa.Question %}
+      <p class="preview__title">{{fatwa.Question}}</p>
+      {% else %}
+      <p class="preview__title">{{fatwa.Title}}</p>
+      <p class="preview__question">{{fatwa.Question}}</p>
+      {% endif %}
+    </a>
+  </li>
+  {% endfor %}
+</ul>

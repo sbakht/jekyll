@@ -1,0 +1,18 @@
+---
+title: Fat
+layout: default
+---
+
+<div class="fatwa__heading">
+  {% if page.Title == page.Question %}
+  <p class="fatwa__question">{{page.Question}}</p>
+  {% else %}
+  <p class="fatwa__title">{{page.Title}}</p>
+  <p class="fatwa__question">{{page.Question}}</p>
+  {% endif %}
+</div>
+<div class="fatwa__answer">
+  {% for ans in page.Answer %}
+  <p>{{ans.paragraph}}</p>
+  {% endfor %}
+</div>

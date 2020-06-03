@@ -2,20 +2,31 @@ collections:
   authors:
     output: true
 
-baseurl: /jekyll
+baseurl: /
+
+plugins:
+  - jekyll-datapage-generator
 
 defaults:
   - scope:
-      path: ""
-      type: "authors"
+      path: ''
+      type: 'authors'
     values:
-      layout: "author"
+      layout: 'author'
   - scope:
-      path: ""
-      type: "posts"
+      path: ''
+      type: 'posts'
     values:
-      layout: "post"
+      layout: 'post'
   - scope:
-      path: ""
+      path: ''
     values:
-      layout: "default"
+      layout: 'default'
+
+page_gen-dirs: false # uncomment, if you prefer to generate named folders
+
+page_gen:
+  - data: 'qa.title'
+    template: 'fatwa'
+    name: 'name'
+    dir: 'fatwas/history'

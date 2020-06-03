@@ -1,0 +1,5 @@
+<div id="fatwa-categories">
+    {% for item in site.data.fatwa-categories %}
+      <a class="nav__link" href="{{ item.link | relative_url }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+    {% endfor %}
+</div>
