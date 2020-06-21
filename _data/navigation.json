@@ -1,6 +1,6 @@
 [
   { "name": "Home", "link": "/" },
-  { "name": "Fatwas", "link": "/fatwas.html" },
+  { "name": "Fatwas", "link": "/fatwas" },
   { "name": "Blog", "link": "/blog.html" },
   { "name": "Staff", "link": "/staff.html" },
   { "name": "About", "link": "/about.html" }

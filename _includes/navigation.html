@@ -1,5 +1,11 @@
 <nav>
-    {% for item in site.data.navigation %}
-      <a class="nav__link" href="{{ item.link | relative_url }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
-    {% endfor %}
+  {% capture url %}{{ page.url | split: '.html'}}{% endcapture %} {% for item in
+  site.data.navigation %}
+  <a
+    class="nav__link {% if url == item.link %}current{% endif %}"
+    href="{{ item.link | relative_url }}"
+  >
+    {{ item.name }}
+  </a>
+  {% endfor %}
 </nav>

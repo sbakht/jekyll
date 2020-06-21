@@ -1,5 +1,6 @@
 ---
 title: Fatwas - History
+sidebar: true
 ---
 
 <h1>Fatwas</h1>
@@ -9,7 +10,7 @@ title: Fatwas - History
   <li class="fatwa">
     <a
       class="fatwa__preview"
-      href="fatwas/history/{{fatwa.name | downcase | replace: " ", "-" | replace: "?", "" | replace: "(", "" | replace: ")", "" }}"
+      href="/fatwas/history/{{fatwa.name | downcase | replace: " ", "-" | replace: "?", "" | replace: "(", "" | replace: ")", "" }}"
     >
       {% if fatwa.Title == fatwa.Question %}
       <p class="preview__title">{{fatwa.Question}}</p>

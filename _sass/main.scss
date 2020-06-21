@@ -6,7 +6,7 @@ article {
   margin-left: 20px;
 }
 
-.current {
+#header .current {
   color: red;
 }
 
@@ -99,4 +99,17 @@ nav {
 
 .fatwa__answer {
   line-height: 2.2em;
+}
+
+#fatwa-categories {
+  margin-left: 20px;
+
+  .current {
+    border-left: 3px solid green;
+  }
+
+  a {
+    padding-left: 10px;
+    border-left: 3px solid #fff;
+  }
 }
