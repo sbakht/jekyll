@@ -1,0 +1,13 @@
+{% capture activeCategory %}{{ page.url | split: '/fatwas/' | last | split:
+'.html' | first | split: '/' | first}}{% endcapture %}
+
+<div id="sidebar" class="mdl-navigation">
+  {% for item in site.data.sidebar %}
+  <a
+    class="mdl-navigation__link {% if url == item.link %}current{% endif %}"
+    href="{{ item.link | relative_url }}"
+  >
+    {{ item.name }}
+  </a>
+  {% endfor %}
+</div>

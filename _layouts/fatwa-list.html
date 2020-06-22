@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<h1>{{page.title}}</h1>
+
+
+{% capture category %}{{page.title | downcase}}{% endcapture %}
+
+<ul class="fatwas__list">
+  {% for fatwa in site.data.fatwas[category].title %}
+  <li class="fatwa">
+    <a
+      class="fatwa__preview"
+      href="/fatwas/{{category}}/{{fatwa.name | downcase | replace: " ", "-" | replace: "?", "" | replace: "(", "" | replace: ")", "" }}"
+    >
+      {% if fatwa.Title == fatwa.Question %}
+      <p class="preview__title">{{forloop.index}}. {{fatwa.Question}}</p>
+      {% else %}
+      <p class="preview__title">{{forloop.index}}. {{fatwa.Title}}</p>
+      <p class="preview__question">{{fatwa.Question}}</p>
+      {% endif %}
+    </a>
+  </li>
+  {% endfor %}
+</ul>

@@ -10,4 +10,8 @@
 
 #header {
   grid-column: 2;
+
+  .current {
+    font-weight: 800;
+  }
 }

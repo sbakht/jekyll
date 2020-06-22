@@ -20,13 +20,15 @@
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   </head>
   <body>
-    {% include header.html %}
-    <div id="container">
-      <article>
-        {{ content }}
-      </article>
-      {% if page.sidebar %} {% include fatwa-categories.html %} {% endif %}
+    <div class="mdl-layout mdl-js-layout">
+      {% include header.html %}
+      <div id="container">
+        <article>
+          {{ content }}
+        </article>
+        {% if page.sidebar %} {% include sidebar.html %} {% endif %}
+      </div>
+      {% include footer.html %}
     </div>
-    <footer>Footer</footer>
   </body>
 </html>
